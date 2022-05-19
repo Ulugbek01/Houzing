@@ -17,3 +17,5 @@ export const Root = () => {
     </div>
   )
 }
+
+export default Root;
