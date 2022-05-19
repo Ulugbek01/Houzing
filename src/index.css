@@ -73,6 +73,9 @@ li {
     /* btn-border-radius */
     --primary-btn-border-radius: 2px;
     --secondary-btn-border-radius: 3px;
+
+    /* width */
+    --width: 1200px;
 }
 
 /* Common styles */
@@ -83,7 +86,7 @@ li {
     font-size: 44px;
     line-height: 48px;
     letter-spacing: -0.02em;
-    color: #fff;
+    color: var(--primary-text-color);
 }
 
 .title {
@@ -92,7 +95,7 @@ li {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -0.02em;
-    color: #fff;
+    color: var(--primary-text-color);
 }
 
 .to-uppercase {
@@ -109,10 +112,12 @@ li {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -0.02em;
+    color: var(--secondary-text-color);
 }
 
 .section-discription {
     font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -123,14 +128,19 @@ li {
     gap: 10px;
     border: 1px solid #FFFFFF;
     border-radius: 2px;
-    background-color: #0061DF;
+    background-color: transparent;
+    color: var(--btn-text-color);
+    outline: none;
+    cursor: pointer;
 }
 
 .card-btn {
     padding: 5px 12px;
     gap: 10px;
-    background-color: #0061DF;
+    background-color: var(--primary-btn-bg-color);
     border-radius: 3px;
+    color: var(--btn-text-color);
+    text-transform: uppercase;
 }
 
 .nocopy {

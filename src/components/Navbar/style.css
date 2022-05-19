@@ -1,0 +1,13 @@
+.logo-title {
+    color: var(--primary-text-color);
+    margin-left: 12px;
+}
+
+.nav-link {
+    color: var(--primary-text-color);
+    line-height: 24px;
+}
+
+.nav-link:not(:last-child) {
+    margin-right: 64px;
+}
