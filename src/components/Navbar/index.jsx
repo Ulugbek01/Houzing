@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { navbar } from '../../utils/navbar'
 import { Header, Container, LogoWrapper, NavItemsWrapper } from './style'
 import {ReactComponent as Logo} from '../../assets/icons/logo.svg';
@@ -15,10 +15,10 @@ export const Navbar = () => {
         </LogoWrapper>
 
         <NavItemsWrapper>
-          {navbar.map(({id, title, path})=> 
-            <Link key={id} to={path} className="nav-link">
+          {navbar.map(({id, title, path, hidden})=> 
+           !hidden && <NavLink key={id} to={path} className="nav-link">
               {title}
-            </Link>
+            </NavLink>
           )}
         </NavItemsWrapper>
 
