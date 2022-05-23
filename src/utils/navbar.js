@@ -33,7 +33,7 @@ export const navbar = [
   {
     id: 4,
     title: "Sign In",
-    path: "/signIn",
+    path: "/signin",
     Element: <div />,
     search: "?",
     hidden: true,
@@ -42,7 +42,7 @@ export const navbar = [
   {
     id: 5,
     title: "Sign Up",
-    path: "/signUp",
+    path: "/signup",
     Element: <div />,
     search: "?",
     hidden: true,

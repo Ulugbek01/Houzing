@@ -5,7 +5,6 @@ import { navbar } from '../utils/navbar'
 
 export const Root = () => {
   return (
-    <div>
       <BrowserRouter>
         <Navbar/>
         <Routes>
@@ -14,7 +13,6 @@ export const Root = () => {
           )}
         </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 

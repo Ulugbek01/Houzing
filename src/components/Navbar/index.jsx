@@ -1,28 +1,28 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { navbar } from '../../utils/navbar'
-import { Header, Container, LogoWrapper, NavItemsWrapper } from './style'
-import {ReactComponent as Logo} from '../../assets/icons/logo.svg';
-import './style.css';
+import { Button } from '../Generic/Button'
+import { Header, Container, Logo, NavItemsWrapper, activeStyle } from './style'
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <Header>
-      <Container>
-        <LogoWrapper>
-          <Logo width={30} height={36}/>
-          <h3 className='logo-title'>Houzing</h3>
-        </LogoWrapper>
+      <Container className='nocopy'>
+        <Logo onClick={()=> navigate('/home')}>
+          <Logo.Icon/>
+          <Logo.Title>Houzing</Logo.Title>
+        </Logo>
 
-        <NavItemsWrapper>
+        <NavItemsWrapper >
           {navbar.map(({id, title, path, hidden})=> 
-           !hidden && <NavLink key={id} to={path} className="nav-link">
+           !hidden && <NavLink key={id} to={path} style={activeStyle}>
               {title}
             </NavLink>
           )}
         </NavItemsWrapper>
 
-        <button type='button' className='button'>Login</button>
+        <Button width={'120'}>Login</Button>
       </Container>
     </Header>
   )
