@@ -6,6 +6,7 @@ export const getType = (type) => {
       return {
         color: "#fff",
         backgroundColor: "#0061DF",
+        border: "1px solid #0061DF",
       };
     case "secondary":
       return {
