@@ -15,4 +15,7 @@ export const Container = styled.input`
   color: #0d263b;
   border: 1px solid #e6e9ec;
   outline: none;
+  :focus {
+    border: 1px solid #40a9ff;
+  }
 `;
