@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  flex: 1;
+`;
 
 export const Container = styled.input`
-  display: flex;
-  align-items: center;
   font-family: "Montserrat", sans-serif;
   width: ${({ width }) => (width ? `${width}px` : "100%")};
   height: ${({ height }) => (height ? `${height}px` : "44px")};

@@ -5,6 +5,9 @@ import { ReactComponent as filterIcon } from "../../assets/icons/setting-lines.s
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  max-width: var(--width);
+  width: 100%;
+  padding: 10px 130px;
 `;
 
 export const SearchIcon = styled(searchIcon)`

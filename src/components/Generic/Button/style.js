@@ -29,6 +29,8 @@ export const Container = styled.div`
   font-family: "Montserrat", sans-serif;
   width: ${({ width }) => (width ? `${width}px` : "100%")};
   height: ${({ height }) => (height ? `${height}px` : "44px")};
+  margin-right: ${({ mr }) => (mr ? `${mr}px` : 0)};
+  margin-left: ${({ ml }) => (ml ? `${ml}px` : 0)};
   font-size: 14px;
   line-height: 20px;
   border: 1px solid #fff;

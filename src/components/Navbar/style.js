@@ -7,13 +7,14 @@ const flexBox = css`
 `;
 
 export const Header = styled.div`
-  ${flexBox};
-  background-color: var(--primary-bg-color);
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Container = styled.div`
   ${flexBox};
   justify-content: space-between;
+  background-color: var(--primary-bg-color);
   max-width: var(--width);
   margin: 0 auto;
   width: 100%;
@@ -33,6 +34,7 @@ Logo.Title = styled.h3`
   font-size: 20px;
   font-weight: 500;
   color: #fff;
+  margin: 0;
   margin-left: 12px;
 `;
 

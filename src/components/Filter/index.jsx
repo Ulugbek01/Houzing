@@ -7,7 +7,7 @@ export const Filter = () => {
   return (
     <Container>
         <Input placeholder="Enter an address, neighborhood, city, or ZIP code"/>
-        <Button type='secondary' width='131'><FilterIcon/> Advanced</Button>
+        <Button type='secondary' width='131' mr={20} ml={20}><FilterIcon/> Advanced</Button>
         <Button type='primary' width='180'><SearchIcon/> Search</Button>
     </Container>
   )

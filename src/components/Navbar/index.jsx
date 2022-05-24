@@ -28,8 +28,7 @@ export const Navbar = () => {
 
         <Button width={'120'} onClick={gotoSingnIn}>Login</Button>
       </Container>
-
-      <Outlet/>
+        <Outlet/>
     </Header>
   )
 }
