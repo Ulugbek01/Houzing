@@ -1,10 +1,12 @@
 import React from 'react'
+import { Container } from './style';
+import { Filter } from '../Filter';
 
 export const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <Container>
+      <Filter/>
+    </Container>
   )
 }
 

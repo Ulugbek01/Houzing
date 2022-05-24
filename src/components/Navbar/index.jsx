@@ -1,11 +1,15 @@
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, Outlet } from 'react-router-dom'
 import { navbar } from '../../utils/navbar'
 import { Button } from '../Generic/Button'
 import { Header, Container, Logo, NavItemsWrapper, activeStyle } from './style'
 
 export const Navbar = () => {
   const navigate = useNavigate();
+
+  const gotoSingnIn = ()=> {
+    navigate('/signin');
+  }
   return (
     <Header>
       <Container className='nocopy'>
@@ -22,8 +26,10 @@ export const Navbar = () => {
           )}
         </NavItemsWrapper>
 
-        <Button width={'120'}>Login</Button>
+        <Button width={'120'} onClick={gotoSingnIn}>Login</Button>
       </Container>
+
+      <Outlet/>
     </Header>
   )
 }

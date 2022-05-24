@@ -1,4 +1,4 @@
-import Home from "../components/Home";
+import Home from "../pages/Home";
 import Properties from "../components/Properties";
 import Contacts from "../components/Contacts";
 
