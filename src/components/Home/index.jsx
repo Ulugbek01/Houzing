@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container} from './style';
+import { Container } from './style';
 import { Filter } from '../Filter';
 // import { Button } from '../Generic/Button';
 import { Carousel } from 'antd';
@@ -24,24 +24,24 @@ export const Home = () => {
             </MainSection.Overflow>
           </MainSection> */}
         <div>
-          <h3 style={contentStyle}>
-            <img src={mainImage} alt="main-image" />
-          </h3>
+          <div style={contentStyle}>
+            <img src={mainImage} alt="" />
+          </div>
         </div>
         <div>
-          <h3 style={contentStyle}>
-            <img src={mainImage} alt="main-image" />
-          </h3>
+          <div style={contentStyle}>
+            <img src={mainImage} alt="" />
+          </div>
         </div>
         <div>
-          <h3 style={contentStyle}>
-            <img src={mainImage} alt="main-image" />
-          </h3>
+          <div style={contentStyle}>
+            <img src={mainImage} alt="" />
+          </div>
         </div>
         <div>
-          <h3 style={contentStyle}>
-            <img src={mainImage} alt="main-image" />
-          </h3>
+          <div style={contentStyle}>
+            <img src={mainImage} alt=""/>
+          </div>
         </div>
         </Carousel>
     </Container>
