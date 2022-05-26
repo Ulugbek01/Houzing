@@ -7,11 +7,14 @@ import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
 export const Container = styled.div``;
 
 export const ImgWrapper = styled.div`
+  width: 100%;
+  height: 470px;
   position: relative;
 `;
 
 export const Img = styled.img`
   width: 100%;
+  height: 100%;
 `;
 
 Img.Owerliy = styled.div`
@@ -88,4 +91,17 @@ export const Ruler = styled(ruler)`
   & path {
     fill: #fff;
   }
+`;
+
+/* Recommended styles */
+export const RecommendedWrapper = styled.div`
+  padding-top: 85px;
+`;
+
+RecommendedWrapper.Title = styled.h2``;
+RecommendedWrapper.Discription = styled.p``;
+
+export const CardsWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `;
