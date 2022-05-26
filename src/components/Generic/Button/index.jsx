@@ -11,6 +11,7 @@ export const Button = ({
     mr,
     mb,
     ml,
+    mAuto
 }) => {
   return (
     <Container
@@ -18,6 +19,7 @@ export const Button = ({
         mr={mr}
         mb={mb}
         ml={ml}
+        mAuto={mAuto}
         type={type}
         width={width}
         height={height}
