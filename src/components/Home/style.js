@@ -5,7 +5,7 @@ import { ReactComponent as car } from "../../assets/icons/car.svg";
 import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
 
 const leftToRight = (position) => {
-  if (position == "left") {
+  if (position === "left") {
     return {
       left: "32px",
     };
