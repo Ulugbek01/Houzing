@@ -4,7 +4,38 @@ import { ReactComponent as bath } from "../../assets/icons/bath.svg";
 import { ReactComponent as car } from "../../assets/icons/car.svg";
 import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
 
+const leftToRight = (position) => {
+  if (position == "left") {
+    return {
+      left: "32px",
+    };
+  } else {
+    return {
+      right: "32px",
+    };
+  }
+};
+
 export const Container = styled.div``;
+
+export const CarouselWrapper = styled.div`
+  position: relative;
+`;
+
+export const NextIconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  ${({ position }) => leftToRight(position)}
+  z-index: 99;
+  cursor: pointer;
+`;
 
 export const ImgWrapper = styled.div`
   width: 100%;

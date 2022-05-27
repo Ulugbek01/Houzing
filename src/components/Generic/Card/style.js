@@ -13,7 +13,9 @@ export const CardWrapper = styled.div`
 `;
 
 export const CardImgWrapper = styled.div``;
-export const CardBody = styled.div``;
+export const CardBody = styled.div`
+  padding: 24px 20px 0;
+`;
 
 CardBody.InfoWrapper = styled.div``;
 
@@ -37,6 +39,7 @@ export const IconsContainer = styled.div`
 `;
 
 export const IconWrapper = styled.div`
+  text-align: center;
   &:not(:last-child) {
     margin-right: 24px;
   }
@@ -44,14 +47,14 @@ export const IconWrapper = styled.div`
 
 IconWrapper.SubTitle = styled.p`
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
 `;
 
 export const CardFooter = styled.div`
   ${FlexBox};
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 8px 20px;
   border-top: 1px solid #e6e9ec;
 `;
 
@@ -59,7 +62,6 @@ CardFooter.Left = styled.div``;
 
 CardFooter.DiscountPrice = styled.p`
   font-size: 12px;
-  line-height: 20px;
   color: var(--text-color);
   text-decoration: line-through;
 `;
@@ -67,8 +69,8 @@ CardFooter.DiscountPrice = styled.p`
 CardFooter.OriginalPrice = styled.p`
   font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
   color: var(--secondary-text-color);
+  margin-bottom: 0;
 `;
 
 CardFooter.Right = styled.div`
