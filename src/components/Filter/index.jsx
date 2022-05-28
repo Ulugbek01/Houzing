@@ -36,7 +36,7 @@ export const Filter = () => {
   )
   return (
     <Container>
-        <Input placeholder="Enter an address, neighborhood, city, or ZIP code"/>
+        <Input isIcon={true} placeholder="Enter an address, neighborhood, city, or ZIP code"/>
         <Popover placement='bottomRight' content={advancedSearch} trigger="click">
           <Button type='secondary' width='131' mr={20} ml={20}><FilterIcon/> Advanced</Button>
         </Popover>

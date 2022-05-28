@@ -1,5 +1,22 @@
 import styled, { css } from "styled-components";
 
+const getPosition = (value) => {
+  switch (value) {
+    case "left":
+      return {
+        top: "20px",
+        left: "20px",
+      };
+    case "right":
+      return {
+        top: "20px",
+        right: "20px",
+      };
+    default:
+      return "";
+  }
+};
+
 const FlexBox = css`
   display: flex;
   align-items: center;
@@ -10,11 +27,44 @@ export const CardWrapper = styled.div`
   background-color: #fff;
   border: 1px solid #e6e9ec;
   border-radius: 3px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 `;
 
-export const CardImgWrapper = styled.div``;
+export const CardImgWrapper = styled.div`
+  position: relative;
+`;
+
 export const CardBody = styled.div`
+  position: relative;
   padding: 24px 20px 0;
+`;
+
+export const CradBtn = styled.div`
+  display: inline-block;
+  padding: 5px 12px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  background: ${({ primary }) =>
+    primary === "primary" ? "#0061DF" : "#0D263B"};
+  border-radius: 3px;
+  position: absolute;
+
+  ${({ value }) => getPosition(value)}
+`;
+
+CardBody.Avatar = styled.div`
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 10px rgba(13, 38, 59, 0.2);
+  border-radius: 50%;
 `;
 
 CardBody.InfoWrapper = styled.div``;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Wrapper } from './style'
+import { Container, HomeIcon, Wrapper } from './style'
 
 export const Input = ({
   children,
@@ -12,15 +12,18 @@ export const Input = ({
   type,
   onChange,
   placeholder,
+  isIcon
 }
 ) => {
   return (
     <Wrapper>
+      {isIcon && <HomeIcon/>}
       <Container 
       placeholder={placeholder}
       width={width}
       height={height}
       type={type}
+      pl={isIcon}
       onChange={onChange}
        />
     </Wrapper>

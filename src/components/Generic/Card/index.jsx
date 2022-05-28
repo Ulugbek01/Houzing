@@ -5,9 +5,10 @@ import { ReactComponent as Car } from "../../../assets/icons/car.svg";
 import { ReactComponent as Ruler } from "../../../assets/icons/ruler.svg";
 import {ReactComponent as Resize} from '../../../assets/icons/arrow-top-bottom.svg';
 import {ReactComponent as Heart} from '../../../assets/icons/heart.svg';
+import  avatar from '../../../assets/images/avatar1.png';
 import apartment from '../../../assets/images/apartment1.jpg';
 import { IconsContainer } from '../../Home/style'
-import {CardBody, CardFooter, CardImgWrapper, CardWrapper, IconWrapper } from './style'
+import {CardBody, CardFooter, CardImgWrapper, CardWrapper, CradBtn, IconWrapper } from './style'
 
 export const Card = ({
     width,
@@ -31,10 +32,15 @@ export const Card = ({
         ml={ml}
     >
         <CardImgWrapper>
-            <img src={apartment} alt="apartment"/>
+          <CradBtn primary="primary" value="left">Featured</CradBtn>
+          <CradBtn value="right">For Sale</CradBtn>
+          <img src={apartment} alt="apartment" width='100%'/>
         </CardImgWrapper>
 
         <CardBody>
+            <CardBody.Avatar>
+              <img src={avatar} alt="avatar img" />
+            </CardBody.Avatar>
             <CardBody.InfoWrapper>
                 <CardBody.Title>New Apartment Nice Wiew</CardBody.Title>
                 <CardBody.Discription>Quincy St, Brooklyn, NY, USA</CardBody.Discription>
