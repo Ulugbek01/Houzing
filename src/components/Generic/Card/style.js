@@ -31,6 +31,12 @@ export const CardWrapper = styled.div`
   &:not(:last-child) {
     margin-right: 20px;
   }
+
+  :hover {
+    filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
+      drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
+      drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
+  }
 `;
 
 export const CardImgWrapper = styled.div`
@@ -83,7 +89,7 @@ CardBody.Discription = styled.p`
   color: var(--text-color);
 `;
 
-export const IconsContainer = styled.div`
+export const InfoDetailes = styled.div`
   ${FlexBox};
   justify-content: center;
 `;

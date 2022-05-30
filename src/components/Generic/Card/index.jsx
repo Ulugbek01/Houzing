@@ -6,11 +6,11 @@ import { ReactComponent as Ruler } from "../../../assets/icons/ruler.svg";
 import {ReactComponent as Resize} from '../../../assets/icons/arrow-top-bottom.svg';
 import {ReactComponent as Heart} from '../../../assets/icons/heart.svg';
 import  avatar from '../../../assets/images/avatar1.png';
-import apartment from '../../../assets/images/apartment1.jpg';
-import { IconsContainer } from '../../Home/style'
-import {CardBody, CardFooter, CardImgWrapper, CardWrapper, CradBtn, IconWrapper } from './style'
+import noimg from '../../../assets/images/noimg.png';
+import {CardBody, CardFooter, CardImgWrapper, CardWrapper, CradBtn, IconWrapper, InfoDetailes } from './style'
 
 export const Card = ({
+    info,
     width,
     height,
     p,
@@ -18,14 +18,14 @@ export const Card = ({
     mr,
     mb,
     ml,
-    m
+    margin
 }) => {
   return (
     <CardWrapper
         width={width}
         height={height}
         padding={p}
-        margin={m}
+        margin={margin}
         mt={mt}
         mr={mr}
         mb={mb}
@@ -34,35 +34,38 @@ export const Card = ({
         <CardImgWrapper>
           <CradBtn primary="primary" value="left">Featured</CradBtn>
           <CradBtn value="right">For Sale</CradBtn>
-          <img src={apartment} alt="apartment" width='100%'/>
+          <img src={info?.apartments[0]?.imgPath || noimg} alt="apartment" width='100%'/>
         </CardImgWrapper>
 
         <CardBody>
             <CardBody.Avatar>
-              <img src={avatar} alt="avatar img" />
+              <img src={info?.user || avatar} alt="avatar img" />
             </CardBody.Avatar>
             <CardBody.InfoWrapper>
-                <CardBody.Title>New Apartment Nice Wiew</CardBody.Title>
-                <CardBody.Discription>Quincy St, Brooklyn, NY, USA</CardBody.Discription>
+                <CardBody.Title>{info?.title || 'title'}</CardBody.Title>
+                <CardBody.Discription>
+                  {info?.name || 'House'}, {info?.address || 'Address'},{" "}
+                  {info?.city || 'City'} {info?.country || 'Country'}
+                </CardBody.Discription>
             </CardBody.InfoWrapper>
-            <IconsContainer>
+            <InfoDetailes>
                 <IconWrapper>
                   <Bed/>
-                  <IconWrapper.SubTitle>4 Beds</IconWrapper.SubTitle>
+                  <IconWrapper.SubTitle>{info?.houseDetails?.beds || 0} Beds</IconWrapper.SubTitle>
                 </IconWrapper>
                 <IconWrapper>
                   <Bath/>
-                  <IconWrapper.SubTitle>5 Baths</IconWrapper.SubTitle>
+                  <IconWrapper.SubTitle>{info?.houseDetails?.bath || 0} Bath</IconWrapper.SubTitle>
                 </IconWrapper>
                 <IconWrapper>
                   <Car/>
-                  <IconWrapper.SubTitle>1 Garage</IconWrapper.SubTitle>
+                  <IconWrapper.SubTitle>{info?.houseDetails?.garage || 0} Garage</IconWrapper.SubTitle>
                 </IconWrapper>
                 <IconWrapper>
                   <Ruler/>
-                  <IconWrapper.SubTitle>1200 Sq Ft</IconWrapper.SubTitle>
+                  <IconWrapper.SubTitle>{info?.houseDetails?.area || 0} Sq Ft</IconWrapper.SubTitle>
                 </IconWrapper>
-            </IconsContainer>
+            </InfoDetailes>
         </CardBody>
 
         <CardFooter>

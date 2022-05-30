@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { Bath, Bed, Car, CardsWrapper, CarouselWrapper, Container, IconsContainer, IconWrapper, Img, ImgWrapper, NextIconWrapper, RecommendedWrapper, Ruler } from './style';
+import AliceCarousel from 'react-alice-carousel';
 import { Button } from '../Generic/Button';
 import { Card } from '../Generic/Card';
 import { Filter } from '../Filter';
@@ -14,7 +15,14 @@ import mainImage3 from "../../assets/images/apartment2.jpg";
 
 export const Home = () => {
   const slider = useRef();
-
+  const items = [
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+    <Card/>,
+  ]
   return (
     <Container>
       <Filter/>
@@ -26,7 +34,7 @@ export const Home = () => {
         <NextIconWrapper position="right" onClick={()=> slider.current?.prev()}>
           <ArrowRight/>
         </NextIconWrapper>
-        <Carousel autoplay ref={slider}>
+        <Carousel autoplay ref={slider} dots>
             <ImgWrapper>
               <Img src={mainImage1} alt="img"/>
               <Img.Owerliy>
@@ -120,13 +128,24 @@ export const Home = () => {
         </Carousel>
       </CarouselWrapper>
 
-      <RecommendedWrapper>
-        <RecommendedWrapper.Title className="section-title">Recommended</RecommendedWrapper.Title>
-        <RecommendedWrapper.Discription>Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</RecommendedWrapper.Discription>
+      <RecommendedWrapper className='nocopy'>
+        <RecommendedWrapper.Title className="section-title text-center">Recommended</RecommendedWrapper.Title>
+        <RecommendedWrapper.Discription className="text-center">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</RecommendedWrapper.Discription>
         <CardsWrapper>
-          <Card />
-          <Card />
-          <Card />
+          <NextIconWrapper position="left" onClick={()=> slider.current?.next()}>
+            <ArrowLeft/>
+          </NextIconWrapper>
+          <NextIconWrapper position="right" onClick={()=> slider.current?.prev()}>
+            <ArrowRight/>
+          </NextIconWrapper>
+          <AliceCarousel
+            arrows={false}
+            ref={slider}
+            // responsive={responsive}
+            autoWidth
+            mouseTracking
+            items={items}
+          />
         </CardsWrapper>
       </RecommendedWrapper>
     </Container>

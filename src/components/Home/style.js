@@ -20,6 +20,7 @@ export const Container = styled.div``;
 
 export const CarouselWrapper = styled.div`
   position: relative;
+  height: fit-content;
 `;
 
 export const NextIconWrapper = styled.div`
@@ -35,6 +36,10 @@ export const NextIconWrapper = styled.div`
   ${({ position }) => leftToRight(position)}
   z-index: 99;
   cursor: pointer;
+
+  :hover {
+    opacity: 0.97;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -135,4 +140,5 @@ RecommendedWrapper.Discription = styled.p``;
 export const CardsWrapper = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
 `;
