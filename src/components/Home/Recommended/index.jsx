@@ -26,10 +26,10 @@ export const Recommended = () => {
             <RecommendedWrapper.Title className="section-title text-center">Recommended</RecommendedWrapper.Title>
             <RecommendedWrapper.Discription className="text-center">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</RecommendedWrapper.Discription>
             <CardsWrapper>
-                <NextIconWrapper position="left" onClick={()=> slider.current?.next()}>
+                <NextIconWrapper position="left" onClick={()=> slider.current?.slideNext()}>
                     <ArrowLeft/>
                 </NextIconWrapper>
-                <NextIconWrapper position="right" onClick={()=> slider.current?.prev()}>
+                <NextIconWrapper position="right" onClick={()=> slider.current?.slidePrev()}>
                     <ArrowRight/>
                 </NextIconWrapper>
                 <AliceCarousel
@@ -38,6 +38,9 @@ export const Recommended = () => {
                     mouseTracking
                     items={items}
                     controlsStrategy="alternate"
+                    autoPlayInterval={1500}
+                    autoPlay={true}
+                    infinite={true}
                 />
                 </CardsWrapper>
       </RecommendedWrapper>
