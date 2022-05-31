@@ -2,7 +2,7 @@ import React from 'react'
 import { Filter } from '../Filter';
 import MainCarousel from './Carousel';
 import Category from './Category';
-import Recommended from './Recommended';
+import CardsCarousel from './CardsCarousel';
 import { Container } from './style';
 import WeeksTopHome from './WeeksTopHome';
 import WhyChoose from './WhyChoose';
@@ -12,10 +12,11 @@ export const Home = () => {
     <Container>
       <Filter/>
       <MainCarousel/>
-      <Recommended/>
+      <CardsCarousel title="Recommended" discription="Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."/>
       <WhyChoose/>
       <Category/>
       <WeeksTopHome/>
+      <CardsCarousel title="Recent Properties for Rent" discription="Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."/>
     </Container>
   )
 }

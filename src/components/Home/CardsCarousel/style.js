@@ -20,14 +20,16 @@ export const Container = styled.div`
 `;
 
 /* Recommended styles */
-export const RecommendedWrapper = styled.div`
+export const CardsCarouselWrapper = styled.div`
   padding-top: 85px;
   max-width: 1180px;
   margin: 0 auto;
 `;
 
-RecommendedWrapper.Title = styled.h2``;
-RecommendedWrapper.Discription = styled.p``;
+CardsCarouselWrapper.Title = styled.h2``;
+CardsCarouselWrapper.Discription = styled.p`
+  margin-bottom: 32px;
+`;
 
 export const CardsWrapper = styled.div`
   display: flex;

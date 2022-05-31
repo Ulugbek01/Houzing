@@ -1,7 +1,7 @@
 import React,{useRef} from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import { Card } from '../../Generic/Card';
-import {ArrowLeft, ArrowRight, CardsWrapper, Container, NextIconWrapper, RecommendedWrapper } from './style';
+import {ArrowLeft, ArrowRight, CardsWrapper, Container, NextIconWrapper, CardsCarouselWrapper } from './style';
 
 const responsive = {
     0: { items: 1 },
@@ -9,7 +9,7 @@ const responsive = {
     992: { items: 3 },
   };
 
-export const Recommended = () => {
+export const CardsCarousel = ({title, discription}) => {
   const slider = useRef();
   const items = [
     <Card/>,
@@ -21,9 +21,9 @@ export const Recommended = () => {
 
   return (
       <Container>
-        <RecommendedWrapper className='nocopy'>
-            <RecommendedWrapper.Title className="section-title text-center">Recommended</RecommendedWrapper.Title>
-            <RecommendedWrapper.Discription className="text-center">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</RecommendedWrapper.Discription>
+        <CardsCarouselWrapper className='nocopy'>
+            <CardsCarouselWrapper.Title className="section-title text-center">{title}</CardsCarouselWrapper.Title>
+            <CardsCarouselWrapper.Discription className="text-center">{discription}</CardsCarouselWrapper.Discription>
             <CardsWrapper>
                 <NextIconWrapper position="left" onClick={()=> slider.current?.slideNext()}>
                     <ArrowLeft/>
@@ -42,9 +42,9 @@ export const Recommended = () => {
                     infinite={true}
                 />
                 </CardsWrapper>
-        </RecommendedWrapper>
+        </CardsCarouselWrapper>
       </Container>
   )
 }
 
-export default Recommended;
+export default CardsCarousel;
