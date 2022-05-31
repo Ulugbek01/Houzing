@@ -151,3 +151,8 @@ li {
     --ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
 }
+
+.alice-carousel__stage-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}

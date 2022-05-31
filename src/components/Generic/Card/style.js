@@ -23,13 +23,13 @@ const FlexBox = css`
 `;
 
 export const CardWrapper = styled.div`
-  width: ${({ width }) => (width ? `${width}px` : "380px")};
+  width: ${({ width }) => (width ? `${width}px` : "100%")};
   background-color: #fff;
   border: 1px solid #e6e9ec;
   border-radius: 3px;
 
   &:not(:last-child) {
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
 
   :hover {

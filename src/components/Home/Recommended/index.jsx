@@ -1,9 +1,7 @@
 import React,{useRef} from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import { Card } from '../../Generic/Card';
-import {CardsWrapper, NextIconWrapper, RecommendedWrapper } from './style';
-import {ReactComponent as ArrowLeft} from '../../../assets/icons/left-arrow.svg';
-import {ReactComponent as ArrowRight} from '../../../assets/icons/right-arrow.svg';
+import {ArrowLeft, ArrowRight, CardsWrapper, Container, NextIconWrapper, RecommendedWrapper } from './style';
 
 const responsive = {
     0: { items: 1 },
@@ -22,6 +20,7 @@ export const Recommended = () => {
   ]
 
   return (
+      <Container>
         <RecommendedWrapper className='nocopy'>
             <RecommendedWrapper.Title className="section-title text-center">Recommended</RecommendedWrapper.Title>
             <RecommendedWrapper.Discription className="text-center">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</RecommendedWrapper.Discription>
@@ -43,7 +42,8 @@ export const Recommended = () => {
                     infinite={true}
                 />
                 </CardsWrapper>
-      </RecommendedWrapper>
+        </RecommendedWrapper>
+      </Container>
   )
 }
 
