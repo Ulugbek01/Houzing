@@ -151,7 +151,35 @@ li {
     user-select: none;
 }
 
+::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: rgba(0,0,0,0.8);
+	border: 1px solid #555555;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .alice-carousel__stage-item {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+    display: none;
 }

@@ -8,6 +8,7 @@ export const Container = styled.div`
 export const WhyChooseUs = styled.div`
   background-color: #f5f7fc;
   padding: 48px 130px;
+  margin-top: 48px;
 `;
 
 export const Properties = styled.div`

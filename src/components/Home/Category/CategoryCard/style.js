@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  max-width: 280px;
+  width: 280px;
   position: relative;
-  border: 1px solid red;
 `;
 
-Card.ImgWrapper = styled.div``;
+Card.ImgWrapper = styled.div`
+  border-radius: 3px;
+`;
 
 Card.Img = styled.img`
   width: 100%;

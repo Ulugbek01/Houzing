@@ -1,7 +1,7 @@
 import React,{useRef} from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import CategoryCard from './CategoryCard';
-import { Container, MainCategory } from './style';
+import { ArrowLeft, ArrowRight, Container, MainCategory, NextIconWrapper } from './style';
 import categoryImg1 from '../../../assets/images/category-img1.png';
 import categoryImg2 from '../../../assets/images/category-img2.png';
 import categoryImg3 from '../../../assets/images/category-img3.png';
@@ -11,6 +11,7 @@ import apartment from '../../../assets/icons/apartment.svg';
 import office from '../../../assets/icons/business-and-trade.svg';
 import villa from '../../../assets/icons/villa.svg';
 
+
 const responsive = {
   0: { items: 1 },
   576: { items: 2 },
@@ -19,7 +20,7 @@ const responsive = {
 };
 
 export const Category = () => {
-  const ref = useRef();
+  const slider = useRef();
 
   const items = [
     <CategoryCard imgUrl={categoryImg1} icon={house} title="House"/>,
@@ -34,15 +35,21 @@ export const Category = () => {
         <Container>
             <MainCategory.Title className="text-center">Category</MainCategory.Title>
             <MainCategory.Text className="text-center">Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</MainCategory.Text>
+            <NextIconWrapper position="left" onClick={()=> slider.current?.slideNext()}>
+                    <ArrowLeft/>
+                </NextIconWrapper>
+                <NextIconWrapper position="right" onClick={()=> slider.current?.slidePrev()}>
+                    <ArrowRight/>
+                </NextIconWrapper>
             <AliceCarousel
-              ref={ref}
+              ref={slider}
               items={items}
               mouseTracking={true}
               controlsStrategy="alternate"
               responsive={responsive}
               autoPlayInterval={1500}
-              // autoPlay={true}
-              // infinite={true}
+              autoPlay={true}
+              infinite={true}
             />
         </Container>
     </MainCategory>
