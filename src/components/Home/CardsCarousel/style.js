@@ -19,7 +19,6 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-/* Recommended styles */
 export const CardsCarouselWrapper = styled.div`
   padding-top: 85px;
   max-width: 1180px;
