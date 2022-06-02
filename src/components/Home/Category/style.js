@@ -17,7 +17,11 @@ const leftToRight = (position) => {
 export const Container = styled.div`
   max-width: 1180px;
   margin: 0 auto;
+`;
+
+export const CarouselWrapper = styled.div`
   position: relative;
+  margin-top: 16px;
 `;
 
 export const MainCategory = styled.div`
@@ -46,7 +50,7 @@ export const NextIconWrapper = styled.div`
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   ${({ position }) => leftToRight(position)}
   z-index: 99;
   border: 1px solid #e6e9ec;

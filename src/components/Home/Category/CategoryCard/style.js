@@ -17,7 +17,13 @@ Card.Img = styled.img`
 Card.Title = styled.h4`
   font-size: 18px;
   line-height: 28px;
-  position: absolute;
-  top: 50%;
   color: #fff;
+`;
+
+Card.Overliy = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40%;
+  text-align: center;
 `;
