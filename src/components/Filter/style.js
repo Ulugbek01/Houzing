@@ -8,6 +8,7 @@ export const Container = styled.div`
   max-width: var(--width);
   width: 100%;
   padding: 10px 130px;
+  margin: 0 auto;
 `;
 
 export const SearchIcon = styled(searchIcon)`

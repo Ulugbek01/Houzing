@@ -1,5 +1,5 @@
 import Home from "../pages/Home";
-import Properties from "../components/Properties";
+import Properties from "../pages/Properties";
 import Contacts from "../components/Contacts";
 
 export const navbar = [
