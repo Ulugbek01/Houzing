@@ -12,7 +12,9 @@ export const Input = ({
   type,
   onChange,
   placeholder,
-  isIcon
+  isIcon,
+  name,
+  value
 }
 ) => {
   return (
@@ -25,6 +27,8 @@ export const Input = ({
       type={type}
       pl={isIcon}
       onChange={onChange}
+      name={name}
+      value={value}
        />
     </Wrapper>
   )

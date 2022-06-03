@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useQuery } from 'react-query';
+import { useLocation } from 'react-router-dom';
 import { Filter } from '../Filter';
 import { Card } from '../Generic/Card';
 import { Container, ItemsWrapper, PropertiesDiscription, PropertiesTitle } from './style';
@@ -8,9 +9,10 @@ const { REACT_APP_BASE_URL: url } = process.env;
 
 export const Properties = () => {
   const [data, setData] = useState([]);
-  console.log(data);
+  
+  const {search} = useLocation();
 
-  useQuery([''], ()=> {return fetch(`${url}/v1/houses/list`).then((res)=> res.json())}, {
+  useQuery(['getHouses', search], ()=> {return fetch(`${url}/v1/houses/list${search || '?'}`).then((res)=> res.json())}, {
     onSuccess: (res)=> {
       setData(res?.data || []);
     }
