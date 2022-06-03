@@ -43,6 +43,6 @@ export const Section = styled.div`
 Advanced.Footer = styled.div`
   display: flex;
   align-items: center;
-  background: #f6f8f9;
+  /* background: #f6f8f9; */
   padding: 20px;
 `;

@@ -34,15 +34,15 @@ export const Card = ({
         <CardImgWrapper>
           <CradBtn primary="primary" value="left">Featured</CradBtn>
           <CradBtn value="right">For Sale</CradBtn>
-          <img src={info?.attachments[0]?.imgPath || noimg} alt="apartment" width='100%' height={220}/>
+          <img src={info?.attachments[0]?.imgPath || noimg} alt="apartment" width='100%' height='100%'/>
         </CardImgWrapper>
 
         <CardBody>
             <CardBody.Avatar>
-              <img src={info?.user || avatar} alt="user" />
+              <img src={info?.user?.avatar || avatar} alt="user" />
             </CardBody.Avatar>
             <CardBody.InfoWrapper>
-                <CardBody.Title>{info?.title || 'title'}</CardBody.Title>
+                <CardBody.Title>{info?.title || 'New Apartment Nice Wiew'}</CardBody.Title>
                 <CardBody.Discription>
                   {info?.name || 'House'}, {info?.address || 'Address'},{" "}
                   {info?.city || 'City'} {info?.country || 'Country'}

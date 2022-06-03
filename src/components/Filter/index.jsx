@@ -29,7 +29,7 @@ export const Filter = () => {
       </Advanced.Body>
     
       <Advanced.Footer>
-        <Button type="secondary" width={128} mr={20}>Cancel</Button>
+        {/* <Button type="secondary" width={128} mr={20} mAuto='auto'>Cancel</Button> */}
         <Button type="primary" width={128}>Submit</Button>
       </Advanced.Footer>
     </Advanced>

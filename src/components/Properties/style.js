@@ -1,10 +1,29 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  /* padding: 0 130px; */
+`;
+
+export const PropertiesTitle = styled.h2`
+  margin-top: 64px;
+`;
+
+export const PropertiesDiscription = styled.p`
+  margin-bottom: 64px;
+`;
 
 export const ItemsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* justify-content: space-between; */
+  margin: 0 auto;
+  padding: 0 130px;
+  gap: 20px;
+  margin: 0 auto;
+
+  & > div {
+    width: 350px;
+    min-height: 490px;
+    max-height: 500px;
+  }
 `;

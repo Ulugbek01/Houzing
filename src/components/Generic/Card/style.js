@@ -27,7 +27,6 @@ export const CardWrapper = styled.div`
   background-color: #fff;
   border: 1px solid #e6e9ec;
   border-radius: 3px;
-
   &:not(:last-child) {
     /* margin-right: 20px; */
   }
@@ -41,6 +40,7 @@ export const CardWrapper = styled.div`
 
 export const CardImgWrapper = styled.div`
   position: relative;
+  height: 220px;
 `;
 
 export const CardBody = styled.div`
@@ -65,6 +65,8 @@ export const CradBtn = styled.div`
 `;
 
 CardBody.Avatar = styled.div`
+  width: 42px;
+  height: 42px;
   position: absolute;
   top: -20px;
   right: 20px;
