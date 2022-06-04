@@ -7,10 +7,11 @@ import { Button } from '../Generic/Button';
 import { Card } from '../Generic/Card';
 import { Container, ItemsWrapper, PropertiesDiscription, PropertiesTitle } from './style';
 
-const { REACT_APP_BASE_URL: url } = process.env; 
 
 export const Properties = () => {
+  const { REACT_APP_BASE_URL: url } = process.env; 
   const [data, setData] = useState([]);
+  const [activeBtn, setActiveBtn] = useState(true);
   
   const {search} = useLocation();
 
@@ -19,19 +20,23 @@ export const Properties = () => {
       setData(res?.data || []);
     }
   })
+
+  const setActive = () => {
+    setActiveBtn(!activeBtn);
+  }
   return (
     <Container>
       <Filter/>
       <PropertiesTitle className='section-title text-center'>Properties</PropertiesTitle>
       <PropertiesDiscription className='section-discription text-center'>Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.</PropertiesDiscription>
       <ItemsWrapper>
-        {data.length ? data.map((item) => 
+        {data.length > 0 ? data.slice(0, activeBtn ? data.length/2 : data.length).map((item) => 
           <Card key={item.id} info={item}/>
         )
           : <div className='text-center'>No Data Found</div>
         }
       </ItemsWrapper>
-      <Button type="primary" width={250} mAuto="auto">Show more</Button>
+      <Button type="primary" width={250} mAuto="auto" onClick={setActive} none={ activeBtn || 'none'}>Show more</Button>
       <Footer/>
     </Container>
   )

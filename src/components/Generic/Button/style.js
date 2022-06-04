@@ -37,6 +37,7 @@ export const Container = styled.div`
   border: 1px solid #fff;
   border-radius: 2px;
   cursor: pointer;
+  display: ${({ dNone }) => (dNone ? `${dNone}` : "")};
 
   ${({ type }) => getType(type)}
   :active {

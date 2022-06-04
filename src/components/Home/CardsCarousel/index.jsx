@@ -11,7 +11,6 @@ const responsive = {
 
 export const CardsCarousel = ({title, discription}) => {
   const slider = useRef();
-  console.log(useRef);
   const items = [
     <Card/>,
     <Card/>,

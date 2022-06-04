@@ -12,7 +12,8 @@ export const Button = ({
     mb,
     ml,
     mAuto,
-    mlAuto
+    mlAuto,
+    none
 }) => {
   return (
     <Container
@@ -27,6 +28,7 @@ export const Button = ({
         height={height}
         onClick={onClick}
         className="nocopy"
+        dNone = {none}
     >
         {children}
     </Container>
