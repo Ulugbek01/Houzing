@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { useQuery } from 'react-query';
 import { useLocation } from 'react-router-dom';
 import { Filter } from '../Filter';
+import Footer from '../Footer';
+import { Button } from '../Generic/Button';
 import { Card } from '../Generic/Card';
 import { Container, ItemsWrapper, PropertiesDiscription, PropertiesTitle } from './style';
 
@@ -29,6 +31,8 @@ export const Properties = () => {
           : <div className='text-center'>No Data Found</div>
         }
       </ItemsWrapper>
+      <Button type="primary" width={250} mAuto="auto">Show more</Button>
+      <Footer/>
     </Container>
   )
 }

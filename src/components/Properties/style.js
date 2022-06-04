@@ -19,7 +19,7 @@ export const ItemsWrapper = styled.div`
   margin: 0 auto;
   padding: 0 130px;
   gap: 20px;
-  margin: 0 auto;
+  margin: 0 auto 48px;
 
   & > div {
     width: 350px;
