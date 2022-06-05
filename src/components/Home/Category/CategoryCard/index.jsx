@@ -1,14 +1,16 @@
 import React from 'react'
 import { Card } from './style';
+import categoryImg from '../../../../assets/images/category-img3.png';
+import {ReactComponent as House} from '../../../../assets/icons/house.svg';
 
-export const CategoryCard = ({imgUrl, icon, title}) => {
+export const CategoryCard = ({title}) => {
   return (
     <Card>
         <Card.ImgWrapper>
-            <Card.Img src={imgUrl} alt="card img"/>
+            <Card.Img src={categoryImg} alt="card img"/>
         </Card.ImgWrapper>
         <Card.Overliy>
-          <img src={icon} alt="icon" />
+          <House/>
           <Card.Title>{title}</Card.Title>   
         </Card.Overliy>
     </Card>

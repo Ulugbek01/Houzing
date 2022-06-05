@@ -1,15 +1,16 @@
-import React,{useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import AliceCarousel from 'react-alice-carousel';
+import { useQuery } from 'react-query';
 import CategoryCard from './CategoryCard';
 import { ArrowLeft, ArrowRight, CarouselWrapper, Container, MainCategory, NextIconWrapper } from './style';
-import categoryImg1 from '../../../assets/images/category-img1.png';
-import categoryImg2 from '../../../assets/images/category-img2.png';
-import categoryImg3 from '../../../assets/images/category-img3.png';
-import categoryImg4 from '../../../assets/images/category-img4.png';
-import house from '../../../assets/icons/house.svg';
-import apartment from '../../../assets/icons/apartment.svg';
-import office from '../../../assets/icons/business-and-trade.svg';
-import villa from '../../../assets/icons/villa.svg';
+// import categoryImg1 from '../../../assets/images/category-img1.png';
+// import categoryImg2 from '../../../assets/images/category-img2.png';
+// import categoryImg3 from '../../../assets/images/category-img3.png';
+// import categoryImg4 from '../../../assets/images/category-img4.png';
+// import house from '../../../assets/icons/house.svg';
+// import apartment from '../../../assets/icons/apartment.svg';
+// import office from '../../../assets/icons/business-and-trade.svg';
+// import villa from '../../../assets/icons/villa.svg';
 
 
 const responsive = {
@@ -20,15 +21,27 @@ const responsive = {
 };
 
 export const Category = () => {
+  const {REACT_APP_BASE_URL: url} = process.env;
+  const [state, setState] = useState([]);
   const slider = useRef();
 
-  const items = [
-    <CategoryCard imgUrl={categoryImg1} icon={house} title="House"/>,
-    <CategoryCard imgUrl={categoryImg2} icon={apartment} title="Apartment"/>,
-    <CategoryCard imgUrl={categoryImg3} icon={office} title="Office"/>,
-    <CategoryCard imgUrl={categoryImg4} icon={villa} title="Villa"/>,
-    <CategoryCard imgUrl={categoryImg3} icon={office} title="Office"/>,
-  ]
+  // const items = [
+  //   <CategoryCard imgUrl={categoryImg1} icon={house} title="House"/>,
+  //   <CategoryCard imgUrl={categoryImg2} icon={apartment} title="Apartment"/>,
+  //   <CategoryCard imgUrl={categoryImg3} icon={office} title="Office"/>,
+  //   <CategoryCard imgUrl={categoryImg4} icon={villa} title="Villa"/>,
+  //   <CategoryCard imgUrl={categoryImg3} icon={office} title="Office"/>,
+  // ]
+
+  useQuery([], ()=> {return fetch(`${url}/v1/categories`).then((res)=> res.json())}, {
+    onSuccess: (res) => {
+      let categories = res?.data?.map((value) => {
+        return <CategoryCard title={value}/>
+      }
+      )
+      setState(categories);
+    }
+  })
 
   return (
     <MainCategory>
@@ -44,7 +57,7 @@ export const Category = () => {
                   </NextIconWrapper>
               <AliceCarousel
                 ref={slider}
-                items={items}
+                items={state}
                 mouseTracking={true}
                 controlsStrategy="alternate"
                 responsive={responsive}

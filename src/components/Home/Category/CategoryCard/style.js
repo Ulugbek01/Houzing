@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   width: 280px;
+  min-height: 350px;
   position: relative;
 `;
 
@@ -15,8 +16,8 @@ Card.Img = styled.img`
 `;
 
 Card.Title = styled.h4`
-  font-size: 18px;
-  line-height: 28px;
+  margin-top: 24px;
+  font-size: 14px;
   color: #fff;
 `;
 
