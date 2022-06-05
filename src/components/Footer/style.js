@@ -137,4 +137,5 @@ MainFooter.ArrowTopBtn = styled.div`
   height: 45px;
   background: #0061df;
   border-radius: 3px;
+  cursor: pointer;
 `;

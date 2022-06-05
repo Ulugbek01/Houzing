@@ -72,7 +72,7 @@ export const Footer = () => {
               <Logo.Title>Houzing</Logo.Title>
             </Logo>
             <MainFooter.Discription>Copyright © 2022 CreativeLayers. All Right Reserved.</MainFooter.Discription>
-            <MainFooter.ArrowTopBtn onClick={() =>navigate('/home')}><ArrowTop/></MainFooter.ArrowTopBtn>
+            <MainFooter.ArrowTopBtn onClick={() => navigate('/home')}><ArrowTop/></MainFooter.ArrowTopBtn>
         </MainFooter.Bottom>
       </Container>
     </MainFooter>
