@@ -24,10 +24,10 @@ export const Footer = () => {
               <MainFooter.Li><Email/><a href="mailto:support@houzing.com">support@houzing.com</a></MainFooter.Li>
             </MainFooter.Ul>
             <MainFooter.SocialNetwork>
-              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='#'><Facebook/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
-              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='#'><Twitter/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
-              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='#'><Instagram/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
-              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='#'><Linkedln/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
+              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='https://www.facebook.com'><Facebook/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
+              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='https://www.facebook.com'><Twitter/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
+              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='https://www.facebook.com'><Instagram/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
+              <MainFooter.SocialNetwork.Li><MainFooter.IconWrapper><a href='https://www.facebook.com'><Linkedln/></a></MainFooter.IconWrapper></MainFooter.SocialNetwork.Li>
             </MainFooter.SocialNetwork>
           </MainFooter.Contact>
 
