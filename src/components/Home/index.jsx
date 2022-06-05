@@ -6,6 +6,7 @@ import CardsCarousel from './CardsCarousel';
 import { Container } from './style';
 import WeeksTopHome from './WeeksTopHome';
 import WhyChoose from './WhyChoose';
+import Footer from '../Footer';
 
 export const Home = () => {
   return (
@@ -17,6 +18,7 @@ export const Home = () => {
       <Category/>
       <WeeksTopHome/>
       <CardsCarousel title="Recent Properties for Rent" discription="Nulla quis curabitur velit volutpat auctor bibendum consectetur sit."/>
+      <Footer/>
     </Container>
   )
 }
