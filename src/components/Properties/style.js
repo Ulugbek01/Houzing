@@ -26,4 +26,13 @@ export const ItemsWrapper = styled.div`
     min-height: 490px;
     max-height: 500px;
   }
+
+  & > div.loading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
+
+export const Loading = styled.div``;

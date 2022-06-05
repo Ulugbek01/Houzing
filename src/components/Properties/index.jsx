@@ -5,7 +5,7 @@ import { Filter } from '../Filter';
 import Footer from '../Footer';
 import { Button } from '../Generic/Button';
 import { Card } from '../Generic/Card';
-import { Container, ItemsWrapper, PropertiesDiscription, PropertiesTitle } from './style';
+import { Container, ItemsWrapper, Loading, PropertiesDiscription, PropertiesTitle } from './style';
 
 
 export const Properties = () => {
@@ -33,7 +33,9 @@ export const Properties = () => {
         {data.length > 0 ? data.slice(0, activeBtn ? data.length/2 : data.length).map((item) => 
           <Card key={item.id} info={item}/>
         )
-          : <div className='text-center'>No Data Found</div>
+          : <Loading className='loading'>
+              <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </Loading>
         }
       </ItemsWrapper>
       <Button type="primary" width={250} mAuto="auto" onClick={setActive} none={ activeBtn || 'none'}>Show more</Button>
