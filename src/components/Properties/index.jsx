@@ -34,7 +34,7 @@ export const Properties = () => {
           <Card key={item.id} info={item}/>
         )
           : <Loading className='loading'>
-              <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             </Loading>
         }
       </ItemsWrapper>
