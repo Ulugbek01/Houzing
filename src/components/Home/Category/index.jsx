@@ -31,10 +31,10 @@ export const Category = () => {
     navigate(`/properties?category_id=${value}`);
   }
 
-  useQuery([], ()=> {return fetch(`${url}/v1/categories`).then((res)=> res.json())}, {
+  useQuery([], ()=> {return fetch(`${url}/v1/categories/list`).then((res)=> res.json())}, {
     onSuccess: (res) => {
-      let categories = res?.data?.map((value, index) => {
-        return <CategoryCard onClick={()=> onSelect(index + 1)} title={value} key={index}/>
+      let categories = res?.data?.map((value) => {
+        return <CategoryCard onClick={()=> onSelect(value.id)} title={value?.name} key={value.id}/>
       }
       )
       setState(categories);

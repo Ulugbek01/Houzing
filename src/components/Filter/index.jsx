@@ -34,6 +34,8 @@ const navigate = useNavigate();
       <Section>
         <Input onChange={(e)=> onChange(e)} name="min_price" placeholder="Min price"/>
         <Input onChange={(e)=> onChange(e)} name="max_price" placeholder="Max price"/>
+        <select name="" id="">
+        </select>
       </Section>
       </Advanced.Body>
     
