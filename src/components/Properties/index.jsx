@@ -12,6 +12,7 @@ export const Properties = () => {
   const { REACT_APP_BASE_URL: url } = process.env; 
   const [data, setData] = useState([]);
   const [activeBtn, setActiveBtn] = useState(true);
+  // const [title, setTitle] = useState('Properties');
   
   const {search} = useLocation();
 

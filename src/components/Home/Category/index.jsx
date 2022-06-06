@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import { useQuery } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 import CategoryCard from './CategoryCard';
 import { ArrowLeft, ArrowRight, CarouselWrapper, Container, MainCategory, NextIconWrapper } from './style';
 // import categoryImg1 from '../../../assets/images/category-img1.png';
@@ -24,19 +25,16 @@ export const Category = () => {
   const {REACT_APP_BASE_URL: url} = process.env;
   const [state, setState] = useState([]);
   const slider = useRef();
+  const navigate = useNavigate();
 
-  // const items = [
-  //   <CategoryCard imgUrl={categoryImg1} icon={house} title="House"/>,
-  //   <CategoryCard imgUrl={categoryImg2} icon={apartment} title="Apartment"/>,
-  //   <CategoryCard imgUrl={categoryImg3} icon={office} title="Office"/>,
-  //   <CategoryCard imgUrl={categoryImg4} icon={villa} title="Villa"/>,
-  //   <CategoryCard imgUrl={categoryImg3} icon={office} title="Office"/>,
-  // ]
+  const onSelect = (value) => {
+    navigate(`/properties?category_id=${value}`);
+  }
 
   useQuery([], ()=> {return fetch(`${url}/v1/categories`).then((res)=> res.json())}, {
     onSuccess: (res) => {
-      let categories = res?.data?.map((value) => {
-        return <CategoryCard title={value}/>
+      let categories = res?.data?.map((value, index) => {
+        return <CategoryCard onClick={()=> onSelect(index + 1)} title={value} key={index}/>
       }
       )
       setState(categories);

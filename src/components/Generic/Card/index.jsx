@@ -42,7 +42,7 @@ export const Card = ({
               <img src={info?.user?.avatar || avatar} alt="user" />
             </CardBody.Avatar>
             <CardBody.InfoWrapper>
-                <CardBody.Title>{info?.title || 'New Apartment Nice Wiew'}</CardBody.Title>
+                <CardBody.Title>{info?.title || 'New Apartment Nice Wiew'} Category: {info?.category?.name}</CardBody.Title>
                 <CardBody.Discription>
                   {info?.name || 'House'}, {info?.address || 'Address'},{" "}
                   {info?.city || 'City'} {info?.country || 'Country'}

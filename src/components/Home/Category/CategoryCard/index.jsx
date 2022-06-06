@@ -3,9 +3,9 @@ import { Card } from './style';
 import categoryImg from '../../../../assets/images/category-img3.png';
 import {ReactComponent as House} from '../../../../assets/icons/house.svg';
 
-export const CategoryCard = ({title}) => {
+export const CategoryCard = ({title, onClick}) => {
   return (
-    <Card>
+    <Card onClick={onClick}>
         <Card.ImgWrapper>
             <Card.Img src={categoryImg} alt="card img"/>
         </Card.ImgWrapper>
