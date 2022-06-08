@@ -18,7 +18,8 @@ export const Card = ({
     mr,
     mb,
     ml,
-    margin
+    margin,
+    onClick
 }) => {
   return (
     <CardWrapper
@@ -30,6 +31,7 @@ export const Card = ({
         mr={mr}
         mb={mb}
         ml={ml}
+        onClick={onClick}
     >
         <CardImgWrapper>
           <CradBtn primary="primary" value="left">Featured</CradBtn>

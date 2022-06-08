@@ -24,11 +24,11 @@ export const Input = ({
       placeholder={placeholder}
       width={width}
       height={height}
-      type={type}
       pl={isIcon}
       onChange={onChange}
       name={name}
       value={value}
+      type={type}
        />
     </Wrapper>
   )

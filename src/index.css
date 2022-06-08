@@ -184,6 +184,14 @@ li {
     display: none;
 }
 
+.left-space {
+  margin-left: 10px;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
 /* Loading styles */
 .lds-spinner {
     color: official;
